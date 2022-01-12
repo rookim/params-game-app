@@ -1,11 +1,14 @@
 class MyParamsController < ApplicationController
   def message
     input = params["name"]
+    message = ""
     if input[0].downcase == "a"
-      render json: { message: "Hey, your name starts with the first letter of the alphabet!" }
+      message = "Hey, your name starts with the first letter of the alphabet!"
     else
-      render json: { message: "Cool name, #{input}.capitalize" }
+      message = "Your name does not start with an A :/"
     end
+
+    render json: { message: message }
   end
 
   def guess_num
