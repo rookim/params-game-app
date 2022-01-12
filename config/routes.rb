@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get "/name" => "my_params#message"
+
+  get "/guess_the_number" => "my_params#guess_num"
 end
