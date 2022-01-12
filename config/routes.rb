@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get "/name" => "my_params#message"
 
   get "/guess_the_number" => "my_params#guess_num"
+
+  get "/sum/:number_one/:number_two" => "my_params#return_sum"
 end
