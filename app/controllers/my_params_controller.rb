@@ -12,12 +12,15 @@ class MyParamsController < ApplicationController
   def guess_num
     number = 36
     input = params["number"].to_i
+    message = ""
     if input == 36
-      render json: { message: "Good job, you guessed it!" }
+      message = "Good job, you guessed it!"
     elsif input > 36
-      render json: { message: "Go lower" }
+      message = "Go lower"
     elsif input < 36
-      render json: { message: "Go higher" }
+      message = "Go higher"
     end
+
+    render json: { message: message }
   end
 end
