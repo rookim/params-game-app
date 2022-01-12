@@ -4,7 +4,7 @@ class MyParamsController < ApplicationController
     if input[0].downcase == "a"
       render json: { message: "Hey, your name starts with the first letter of the alphabet!" }
     else
-      render json: { message: "Cool name, #{input}" }
+      render json: { message: "Cool name, #{input}.capitalize" }
     end
   end
 end
