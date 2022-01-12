@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get "/guess_the_number" => "my_params#guess_num"
 
   get "/sum/:number_one/:number_two" => "my_params#return_sum"
+
+  get "/guessing_game/:number" => "my_params#guess_number"
 end

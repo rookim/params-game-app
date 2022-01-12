@@ -9,6 +9,7 @@ class MyParamsController < ApplicationController
     render json: { message: message }
   end
 
+  #uses query parameters
   def guess_num
     number = 36
     input = params["number"].to_i
@@ -29,5 +30,21 @@ class MyParamsController < ApplicationController
     num2 = params["number_two"].to_i
     sum = num1 + num2
     render json: sum
+  end
+
+  #uses url segment parameters
+  def guess_number
+    num = 50
+    guess = params["number"].to_i
+    message = ""
+    if guess == num
+      message = "You guessed it correctly!"
+    elsif guess < num
+      message = "Too low"
+    elsif guess > num
+      message = "Too high"
+    end
+
+    render json: { message: message }
   end
 end
