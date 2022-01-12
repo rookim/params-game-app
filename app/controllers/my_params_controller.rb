@@ -27,9 +27,7 @@ class MyParamsController < ApplicationController
   def return_sum
     num1 = params["number_one"].to_i
     num2 = params["number_two"].to_i
-    render json: {
-      message1: num1,
-      message2: num2,
-    }
+    sum = num1 + num2
+    render json: sum
   end
 end
