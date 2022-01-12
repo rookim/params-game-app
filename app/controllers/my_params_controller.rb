@@ -1,11 +1,9 @@
 class MyParamsController < ApplicationController
   def message
     input = params["name"]
-    message = ""
+    message = "Your name does not start with an A :/"
     if input[0].downcase == "a"
       message = "Hey, your name starts with the first letter of the alphabet!"
-    else
-      message = "Your name does not start with an A :/"
     end
 
     render json: { message: message }
