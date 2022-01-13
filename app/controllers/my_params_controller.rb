@@ -47,4 +47,14 @@ class MyParamsController < ApplicationController
 
     render json: { message: message }
   end
+
+  def account_info
+    user = params["username"]
+    pass = params["password"]
+    msg = "Invalid credentials"
+    if user == "hugh" and pass == "swordfish"
+      msg = "Valid credentials"
+    end
+    render json: msg
+  end
 end

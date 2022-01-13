@@ -1,0 +1,15 @@
+POST http://localhost:3000/guess_number
+Content-Type: application/json
+
+{
+  "number": 50
+}
+###
+
+POST http://localhost:3000/account
+Content-Type: application/json
+
+{
+  "username": "jack",
+  "password": "swordfish"
+}
