@@ -35,7 +35,7 @@ class MyParamsController < ApplicationController
   #uses url segment parameters
   def guess_number
     num = 50
-    guess = params["number"].to_i
+    guess = params["user_guess"].to_i
     message = ""
     if guess == num
       message = "You guessed it correctly!"

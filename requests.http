@@ -2,7 +2,7 @@ POST http://localhost:3000/guess_number
 Content-Type: application/json
 
 {
-  "number": 50
+  "user_guess": 50
 }
 ###
 
